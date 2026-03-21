@@ -82,16 +82,30 @@ const Home = () => {
                         </button>
                     )}
 
-                    {/* Map Image with dynamic scale for zoom effect */}
+                    {/* Real Interactive Map */}
                     <div style={{
                         width: '100%',
                         height: '100%',
-                        // Bangalore city aerial/map placeholder representation
-                        background: 'url(https://images.unsplash.com/photo-1590740884976-1bbf432ebd86?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80) center/cover',
                         opacity: isFullScreenMap ? 1 : 0.4,
                         transform: isFullScreenMap ? 'scale(1)' : 'scale(1.1)',
-                        transition: 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)'
-                    }}></div>
+                        transition: 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+                        pointerEvents: isFullScreenMap ? 'auto' : 'none',
+                        position: 'absolute',
+                        top: 0,
+                        left: 0
+                    }}>
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            frameBorder="0" 
+                            scrolling="no" 
+                            marginHeight="0" 
+                            marginWidth="0" 
+                            src="https://maps.google.com/maps?width=100%25&amp;height=100%25&amp;hl=en&amp;q=Bangalore+(Primeplains)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                            style={{ filter: isFullScreenMap ? 'none' : 'contrast(1.2) brightness(0.8) grayscale(1)' }}
+                            title="Interactive Property Map"
+                        ></iframe>
+                    </div>
 
                     {!isFullScreenMap && (
                         <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', transition: 'all 0.5s ease' }}>

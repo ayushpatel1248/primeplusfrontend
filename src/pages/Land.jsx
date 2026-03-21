@@ -119,7 +119,7 @@ const BuyLands = () => {
             {/* Map & Inventory CTA Section */}
             <div style={{ background: 'rgba(255,255,255,0.02)', borderTop: '1px solid var(--border-light)', borderBottom: '1px solid var(--border-light)' }}>
                 <div className="container" style={{ padding: '6rem 0', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '4rem' }}>
-                    <div style={{ flex: '1', minWidth: '300px' }}>
+                    <div style={{ flex: '1', minWidth: '280px' }}>
                         <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', lineHeight: 1.2 }}>Explore India's Largest <br /><span className="text-gradient">Verified Map View</span></h2>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '2rem', lineHeight: 1.8 }}>
                             Whether you're an institution seeking vast agricultural aggregation or a developer hunting for premium town-planning parcels, our spatial inventory provides unparalleled clarity.
@@ -153,7 +153,7 @@ const BuyLands = () => {
                     </div>
 
                     {/* Abstract Spatial Representation */}
-                    <div style={{ flex: '1', minWidth: '350px', position: 'relative', height: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <div style={{ flex: '1', minWidth: '280px', position: 'relative', height: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <div style={{
                             position: 'absolute',
                             width: '300px',

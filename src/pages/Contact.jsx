@@ -37,20 +37,31 @@ const Contact = () => {
             justifyContent: 'center',
             overflow: 'hidden'
         }}>
-            {/* Background Map Element */}
+            {/* Interactive Background Map Element */}
             <div style={{
                 position: 'absolute',
                 top: 0,
                 left: 0,
                 width: '100%',
                 height: '100%',
-                background: 'url(https://images.unsplash.com/photo-1597042562479-7a55d7b51b32?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80) center/cover',
-                opacity: 0.2,
                 zIndex: 0,
-                filter: 'contrast(1.2) brightness(0.8)',
+                opacity: 0.4,
                 transform: isHovered ? 'scale(1.02)' : 'scale(1)',
-                transition: 'transform 3s ease-out'
-            }}></div>
+                transition: 'transform 3s ease-out',
+                pointerEvents: 'none' // Add this so the map doesn't block interactions if any
+            }}>
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    frameBorder="0" 
+                    scrolling="no" 
+                    marginHeight="0" 
+                    marginWidth="0" 
+                    src="https://maps.google.com/maps?width=100%25&amp;height=100%25&amp;hl=en&amp;q=Beverly%20Hills,%20CA+(Primeplains)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                    style={{ filter: 'contrast(1.2) brightness(0.8) grayscale(1)' }}
+                    title="Primeplains Location"
+                ></iframe>
+            </div>
 
             {/* Radial Gradient Overlay */}
             <div style={{
@@ -66,7 +77,7 @@ const Contact = () => {
             <div className="container" style={{ position: 'relative', zIndex: 10, display: 'flex', flexWrap: 'wrap', gap: '4rem', alignItems: 'center', justifyContent: 'center' }}>
 
                 {/* Contact Info Side */}
-                <div style={{ flex: '1', minWidth: '300px', maxWidth: '500px', animation: 'fadeUp 0.8s ease-out forwards' }}>
+                <div style={{ flex: '1', minWidth: '280px', maxWidth: '500px', animation: 'fadeUp 0.8s ease-out forwards' }}>
                     <h1 className="text-gradient-gold" style={{ fontSize: '4rem', lineHeight: '1', marginBottom: '1.5rem', letterSpacing: '-1px' }}>
                         FORGE YOUR<br />ALLIANCE
                     </h1>
@@ -112,7 +123,7 @@ const Contact = () => {
                     onMouseLeave={() => setIsHovered(false)}
                     style={{
                         flex: '1',
-                        minWidth: '350px',
+                        minWidth: '280px',
                         maxWidth: '500px',
                         padding: '3rem',
                         borderRadius: '24px',

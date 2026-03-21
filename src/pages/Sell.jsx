@@ -50,7 +50,7 @@ const Sell = () => {
             <div className="container" style={{ position: 'relative', zIndex: 10, display: 'flex', flexWrap: 'wrap', gap: '4rem', alignItems: 'center', justifyContent: 'center' }}>
 
                 {/* Sell Info Side */}
-                <div style={{ flex: '1', minWidth: '300px', maxWidth: '500px', animation: 'fadeUp 0.8s ease-out forwards' }}>
+                <div style={{ flex: '1', minWidth: '280px', maxWidth: '500px', animation: 'fadeUp 0.8s ease-out forwards' }}>
                     <div style={{ display: 'inline-block', padding: '0.5rem 1rem', background: 'rgba(206, 177, 109, 0.1)', border: '1px solid var(--accent-gold)', borderRadius: '20px', color: 'var(--accent-gold)', fontSize: '0.9rem', marginBottom: '1rem', letterSpacing: '1px' }}>
                         LANDOWNER PARTNERSHIP
                     </div>
@@ -99,7 +99,7 @@ const Sell = () => {
                     onMouseLeave={() => setIsHovered(false)}
                     style={{
                         flex: '1',
-                        minWidth: '350px',
+                        minWidth: '280px',
                         maxWidth: '500px',
                         padding: '3rem',
                         borderRadius: '24px',
@@ -122,7 +122,7 @@ const Sell = () => {
                         </div>
                     ) : (
                         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', borderBottom: '1px solid var(--border-light)', paddingBottom: '1rem' }}>List Your Asset</h3>
+                            <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', borderBottom: '1px solid var(--border-light)', paddingBottom: '1rem' }}>Add Your Asset</h3>
                             <div>
                                 <input type="text" placeholder="Landowner / Entity Name" required style={{ width: '100%', padding: '1.2rem', background: 'rgba(0,0,0,0.4)', border: '1px solid var(--border-light)', borderRadius: '12px', color: 'white', outline: 'none', transition: 'all 0.3s ease', fontSize: '1rem' }}
                                     onFocus={(e) => e.target.style.borderColor = 'var(--accent-gold)'}

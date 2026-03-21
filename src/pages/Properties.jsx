@@ -187,7 +187,7 @@ const Properties = () => {
 
                 {mockProperties.map((property, index) => (
                     <div key={property.id} style={{
-                        minWidth: '400px',
+                        minWidth: '280px',
                         scrollSnapAlign: 'start',
                         animation: `fadeUp 0.6s ease-out ${index * 0.15}s forwards`,
                         opacity: 0,

@@ -96,7 +96,7 @@ const Navbar = () => {
                 letterSpacing: '3px',
                 textTransform: 'uppercase',
                 color: '#ffffff'
-            }}>lus</span>
+            }}>lains</span>
           </div>
         </div>
 
