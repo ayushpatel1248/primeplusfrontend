@@ -101,7 +101,7 @@ const Home = () => {
                             scrolling="no" 
                             marginHeight="0" 
                             marginWidth="0" 
-                            src="https://maps.google.com/maps?width=100%25&amp;height=100%25&amp;hl=en&amp;q=Bangalore+(Primeplains)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                            src="https://maps.google.com/maps?width=100%25&height=100%25&hl=en&q=Bangalore+(Primeplains)&t=&z=12&ie=UTF8&iwloc=B&output=embed"
                             style={{ filter: isFullScreenMap ? 'none' : 'contrast(1.2) brightness(0.8) grayscale(1)' }}
                             title="Interactive Property Map"
                         ></iframe>

@@ -124,4 +124,28 @@
     .mobile-toggle {
         display: flex;
     }
+
+    .ai-btn, .search-btn, .user-btn {
+        display: none !important;
+    }
+    
+    .mobile-extra-options {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 1rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border-light);
+        width: 80%;
+        justify-content: center;
+    }
+    .mobile-extra-options .ai-btn, 
+    .mobile-extra-options .search-btn, 
+    .mobile-extra-options .user-btn {
+        display: flex !important;
+    }
+}
+
+/* Base style for mobile extra options if not in mobile view */
+.mobile-extra-options {
+    display: none;
 }

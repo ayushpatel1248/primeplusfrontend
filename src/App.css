@@ -48,7 +48,9 @@
   }
 
   .map-container {
+    flex: none;
     height: 50vh;
+    min-height: 350px;
     border-right: none;
     border-bottom: 1px solid var(--border-light);
   }

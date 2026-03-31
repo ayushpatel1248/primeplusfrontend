@@ -118,7 +118,7 @@ const PropertyCard = ({ property }) => {
                 <div className="card-actions" style={{ transform: 'translateZ(50px)' }}>
                     <button className="btn-secondary">View Details</button>
                     {/* Always show the emerald primary button as requested */}
-                    <button className="btn-primary-emerald" onClick={() => setShowModal(true)}>Contact Agent</button>
+                    <button className="btn-primary-emerald" onClick={() => setShowModal(true)} style={{ whiteSpace: 'nowrap' }}>Contact Agent</button>
                 </div>
             </div>
 

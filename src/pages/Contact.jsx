@@ -57,7 +57,7 @@ const Contact = () => {
                     scrolling="no" 
                     marginHeight="0" 
                     marginWidth="0" 
-                    src="https://maps.google.com/maps?width=100%25&amp;height=100%25&amp;hl=en&amp;q=Beverly%20Hills,%20CA+(Primeplains)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                    src="https://maps.google.com/maps?width=100%25&height=100%25&hl=en&q=Beverly%20Hills,%20CA+(Primeplains)&t=&z=14&ie=UTF8&iwloc=B&output=embed"
                     style={{ filter: 'contrast(1.2) brightness(0.8) grayscale(1)' }}
                     title="Primeplains Location"
                 ></iframe>

@@ -65,18 +65,29 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled glass-panel' : ''}`}>
+      {/* Overlay to close mobile menu */}
+      {mobileMenuOpen && (
+        <div 
+          onClick={closeMenu} 
+          style={{ position: 'fixed', top: '80px', left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.5)', zIndex: 998 }}
+        />
+      )}
       <div className="nav-container container">
         <div
           className="nav-logo"
           onClick={() => navigate('/')}
           style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '2px' }}
         >
-          <div className="text-gradient-gold" style={{
+          <div style={{
+              background: 'linear-gradient(135deg, #fcedba 0%, var(--accent-gold) 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
               fontSize: '3.5rem',
               fontWeight: 800,
               lineHeight: '0.8',
               fontFamily: 'var(--font-heading), sans-serif',
-              paddingRight: '4px'
+              paddingRight: '6px'
           }}>
             P
           </div>
@@ -106,6 +117,26 @@ const Navbar = () => {
           <NavLink to="/sell-lands" onClick={closeMenu} className={({ isActive }) => isActive ? "active" : ""}>Sell Lands</NavLink>
           <NavLink to="/advisory" onClick={closeMenu} className={({ isActive }) => isActive ? "active" : ""}>Advisory</NavLink>
           <NavLink to="/contact" onClick={closeMenu} className={({ isActive }) => isActive ? "active" : ""}>Contact</NavLink>
+          
+          <div className="mobile-extra-options">
+            <button 
+              className="icon-btn ai-btn" 
+              onClick={() => { setAiOpen(!aiOpen); setLoginOpen(false); closeMenu(); }}
+              style={{ color: 'var(--accent-gold)' }}
+            >
+              <Sparkles size={20} />
+            </button>
+            <button className="icon-btn search-btn" onClick={closeMenu}>
+              <Search size={20} />
+            </button>
+            <button 
+              className="icon-btn user-btn" 
+              onClick={() => { setLoginOpen(!loginOpen); setAiOpen(false); closeMenu(); }}
+              style={{ color: 'var(--accent-emerald)' }}
+            >
+              <User size={20} />
+            </button>
+          </div>
         </div>
 
         <div className="nav-actions" style={{ position: 'relative' }}>
